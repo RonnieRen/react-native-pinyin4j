@@ -44,6 +44,11 @@
 import RNPinyin4j from 'react-native-pinyin4j';
 
 // TODO: What to do with the module?
-RNPinyin4j;
+RNPinyin4j.getHanyuPinyinStringArray(hanzi).then((pinyins: string[]) => {
+  console.log(pinyins[0]);
+})
+.catch(error => {
+  console.log(error);
+})
 ```
   
