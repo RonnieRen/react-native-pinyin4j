@@ -16,7 +16,7 @@ RCT_EXPORT_METHOD(getHanyuPinyinStringArray: (NSString*)firstCharacter resolver:
     NSMutableString* str = [NSMutableString stringWithString:firstCharacter];
     CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformToLatin, false);
     CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
-    resolver(str);
+    resolver(@[str]);
 }
 @end
   
